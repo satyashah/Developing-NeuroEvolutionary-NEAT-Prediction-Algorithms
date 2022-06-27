@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 # xor_inputs = [[0.0, 0.0], [0.0, 1.0], [0.5, 0.5], [1.0, 1.0]]
 # xor_outputs = [[0.0], [1.0], [1.0], [0.0]]
 
-xor_inputs, xor_outputs, profits, days = basics.getTrainingData()
+xor_inputs, xor_outputs, profits, days = basics.getTestingData()
+
 
 with open("winner.pickle", "rb") as f:
     winner = pickle.load(f)
@@ -45,5 +46,5 @@ for i in range(len(profArr)):
 
 print("Profit Per Day:", sum(ppdArr)/len(ppdArr))
 
-plt.scatter(weightArr, profArr)
-plt.show()
+# plt.scatter(weightArr, profArr)
+# plt.show()
